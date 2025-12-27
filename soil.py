@@ -51,8 +51,8 @@ if missing_files:
 @st.cache_resource
 def load_model():
     lr_model = joblib.load('soil_yield_lr_model.pkl')
-    scaler = joblib.load('soilscaler.pkl')
-    label_encoders = joblib.load('soillabelencoders.pkl')
+    scaler = joblib.load('soil_scaler.pkl')
+    label_encoders = joblib.load('soil_label_encoders.pkl')
     return lr_model, scaler, label_encoders
 
 lr_model, scaler, label_encoders = load_model()
@@ -187,3 +187,4 @@ with st.expander("📖 How to Run"):
 
 st.markdown("---")
 st.caption("🌱 Built for sustainable fertilizer optimization [file:1][file:2]")
+
